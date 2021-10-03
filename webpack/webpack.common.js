@@ -4,11 +4,6 @@ const { EnvironmentPlugin } = require("webpack");
 
 module.exports = {
   entry: path.join(__dirname, "..", "src", "main.jsx"),
-  output: {
-    path: path.resolve(__dirname, "..", "dist", "js"),
-    publicPath: "/js/",
-    filename: "bundle.js",
-  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "..", "src", "index.template.ejs"),

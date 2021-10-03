@@ -1,8 +1,14 @@
+const path = require("path");
 module.exports = {
-  mode: 'development',
+  mode: "development",
+  output: {
+    path: path.resolve(__dirname, "..", "dist", "js"),
+    publicPath: "/",
+    filename: "bundle.js",
+  },
   devServer: {
-    static: './dist/js',
+    static: "./dist/js",
     historyApiFallback: true,
-    host: '0.0.0.0',
+    host: "0.0.0.0",
   },
 };
